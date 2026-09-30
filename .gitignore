@@ -1,70 +1,31 @@
-# .gitignore
-
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
+*.pyo
+*.pyd
 .venv/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+venv/
+.pytest_cache/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+/frontend/vite.config.js
+/frontend/vite.config.d.ts
 
 # Environment
 .env
-.env.local
-.env.*.local
+.env.*
+*.local
 
-# Testing
-.pytest_cache/
-test-output.txt
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+backend/.coverage
+backend/resume_analyzer.db
 .coverage
 htmlcov/
-.tox/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Logs
-*.log
-logs/
-
-# Models
-models/
-*.pth
-*.bin
-*.h5
-
-# Data
-data/
-datasets/
-
-# Cache
-.cache/
-*.cache
