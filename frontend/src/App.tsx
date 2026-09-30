@@ -53,12 +53,6 @@ const useStyles = makeStyles({
   error: { color: tokens.colorPaletteRedForeground1 },
   score: { color: '#2563eb', fontSize: '2.75rem', fontWeight: 700, lineHeight: 1.1 },
   status: { display: 'flex', gap: '0.5rem', alignItems: 'center' },
-  '@media (max-width: 760px)': {
-    topBar: { alignItems: 'flex-start', flexDirection: 'column' },
-    nav: { flexWrap: 'wrap' },
-    page: { padding: '1rem' },
-    layout: { gridTemplateColumns: '1fr' },
-  },
 });
 
 function getStatus(score: number): string {
@@ -118,9 +112,9 @@ function App() {
 
   return (
     <div className={styles.shell}>
-      <header className={styles.topBar}>
+      <header className={`${styles.topBar} app-top-bar`}>
         <Text weight="semibold" size={500}>Resume Analyzer</Text>
-        <nav className={styles.nav} aria-label="Main navigation">
+        <nav className={`${styles.nav} app-nav`} aria-label="Main navigation">
           <Text>Screen candidates</Text>
           <Text>Analysis history</Text>
         </nav>
@@ -131,8 +125,8 @@ function App() {
         </div>
       </header>
 
-      <main className={styles.page}>
-        <div className={styles.layout}>
+      <main className={`${styles.page} app-page`}>
+        <div className={`${styles.layout} app-layout`}>
           <Card className={styles.card}>
             <div className={styles.stack}>
               <div>

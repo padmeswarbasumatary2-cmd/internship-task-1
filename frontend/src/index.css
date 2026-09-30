@@ -33,3 +33,22 @@ h3,
 p {
   margin-top: 0;
 }
+
+@media (max-width: 760px) {
+  .app-top-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .app-nav {
+    flex-wrap: wrap;
+  }
+
+  .app-page {
+    padding: 1rem;
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+}
